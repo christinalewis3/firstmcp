@@ -1,0 +1,13 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# Exclude the virtual environment folder entirely
+.venv/
+venv/
+env/
+
+# Exclude Python compilation artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Exclude local configuration or environment variables
+.env
