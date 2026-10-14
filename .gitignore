@@ -3,6 +3,10 @@
 .venv/
 venv/
 env/
+lib/
+bin/
+include/
+pyenv.cfg
 
 # Exclude Python compilation artifacts
 __pycache__/
