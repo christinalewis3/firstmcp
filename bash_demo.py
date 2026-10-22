@@ -15,6 +15,8 @@ ALLOWED_COMMANDS = {
     "wc -l *.py",
 }
 
+MAX_API_REQUESTS = 5
+
 
 def execute_bash(tool_input: dict) -> tuple[str, bool]:
     """Return command output and whether the tool encountered an error."""
@@ -76,7 +78,7 @@ def main():
     ]
 
     with Anthropic() as client:
-        for turn in range(5):
+        for turn in range(MAX_API_REQUESTS):
             print(f"\n[PYTHON] Sending request {turn + 1} to Claude...")
 
             response = client.messages.create(
